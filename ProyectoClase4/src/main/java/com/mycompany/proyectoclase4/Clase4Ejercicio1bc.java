@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author pBarzaghi
  */
-public class Clase4Ejercicio3 {
+public class Clase4Ejercicio1bc {
     
 /**
  * Metodo de ingresarOrden pregunta si desea que sea Desendiente o Asendiente

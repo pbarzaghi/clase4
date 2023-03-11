@@ -9,7 +9,7 @@ package com.mycompany.proyectoclase4;
  *     represente ascendente o descendente y los muestre ordenados por tal criterio
  * @author pBatzaghi
  */
-public class Clase4Ejercicio1 {
+public class Clase4Ejercicio1a {
   
     
     

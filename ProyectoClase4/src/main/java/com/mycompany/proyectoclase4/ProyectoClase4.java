@@ -20,7 +20,7 @@ public class ProyectoClase4 {
     
     private static void ejercicio1(){
     int[] numeros= new int[3];
-    Clase4Ejercicio3 ejercicio3= new Clase4Ejercicio3();
+    Clase4Ejercicio1bc ejercicio3= new Clase4Ejercicio1bc();
    
     // Invoco ingresar el numero y realizo la validacion que sea un numero    
     numeros[0]= ejercicio3.ingreseNumero(1);
@@ -37,7 +37,7 @@ public class ProyectoClase4 {
     
      // Implementacion del Ejercicio 3
     char orden =ejercicio3.ingreseOrden();
-    Clase4Ejercicio1 ejemplo1=new  Clase4Ejercicio1();
+    Clase4Ejercicio1a ejemplo1=new  Clase4Ejercicio1a();
     
     numeros=ejemplo1.imprimirOrdenArreglo(numeros, orden);
      System.out.println("Order Desendiente (D)- Ascendiente (A) --> "+orden + "  Resultado del Vector: "+numeros[0]+" "+numeros[1]+" "+numeros[2]);
