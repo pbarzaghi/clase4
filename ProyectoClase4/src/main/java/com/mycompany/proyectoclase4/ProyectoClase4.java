@@ -65,8 +65,12 @@ public class ProyectoClase4 {
      // Se comenta este metodo para realizar el inciso a que es general 
       // ejer2.imprimirSumaFile(file);
       
-      ejer2.imprimirFileDadaOperacion(file, "+");
-     ejer2.imprimirFileDadaOperacion(file, "*");
+        String operacion =JOptionPane.showInputDialog("Operacion Suma(+)- Multiplicacion (*)");
+    while (operacion.length()==0 || !("+".equals(operacion) || "*".equals(operacion)) )
+        operacion =JOptionPane.showInputDialog("Operacion Suma(+)- Multiplicacion (*)");
+     
+    ejer2.imprimirFileDadaOperacion(file, operacion);
+     
     
     }
      
