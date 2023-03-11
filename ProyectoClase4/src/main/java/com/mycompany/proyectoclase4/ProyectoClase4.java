@@ -4,19 +4,32 @@
 
 package com.mycompany.proyectoclase4;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author Usuario
  */
 public class ProyectoClase4 {
-
-    public static void main(String[] args) {
-        // Ejercicio 1
-        ejercicio1();
-    }
     
+    public static void main(String[] args) {
+     
+      
+        // Ejercicio 1
+             //ejercicio1();
+        
+        // Ejercicio 2
+             ejercicio2();
+    }
+   
     
     private static void ejercicio1(){
     int[] numeros= new int[3];
@@ -44,4 +57,17 @@ public class ProyectoClase4 {
     
     
     }
+
+    private static void ejercicio2() {
+      String path="E:\\UTN\\Proyectos\\Clase4\\ProyectoClase4\\holaMundo.txt";
+      Clase4Archivo file = new Clase4Archivo(path); 
+      Clase4Ejercicio2a ejer2= new Clase4Ejercicio2a();
+     // Se comenta este metodo para realizar el inciso a que es general 
+      // ejer2.imprimirSumaFile(file);
+      
+      ejer2.imprimirFileDadaOperacion(file, "+");
+     ejer2.imprimirFileDadaOperacion(file, "*");
+    
+    }
+     
 }
