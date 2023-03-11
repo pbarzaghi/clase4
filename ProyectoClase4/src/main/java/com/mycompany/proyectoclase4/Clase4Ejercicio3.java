@@ -30,10 +30,32 @@ public char ingreseOrden(){
              salida=false;
     }
     return cadenaOrden.charAt(0);
+  
+}// fin ingreseOrden
+
+ public int ingreseNumero(int indice){
+ 
+      String nro="";
+    boolean salida=true;
+    int numero=0;
+    while(salida){ 
+       nro=JOptionPane.showInputDialog("Ingrese un munero "+indice+" ");
+       
+       try{
+          numero= Integer.parseInt(nro);
+           salida=false;
+       }catch( NumberFormatException e){
+         System.out.println("Ingreso un fornato de numero incorrecto "+e.getMessage());
+       }
+            
+    }
+       
+    return numero;
+  
+}// fin ingreseOrden
+     
+     
     
-
-   
-}
-
-
+    
+  
 }
