@@ -4,11 +4,15 @@
  */
 package com.mycompany.proyectoclase4;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 /**
@@ -21,6 +25,8 @@ public class Clase4Archivo {
     Clase4Archivo(String path) {
        this.path=path;  }
      
+      Clase4Archivo() {
+       this.path="";  }
  
    public String getPath(){
       return this.path;
@@ -47,4 +53,26 @@ public class Clase4Archivo {
         }
      return fileOut;
    }
-}
+    
+    public void crearFile(String contenido){
+        
+        try {
+         
+            File file = new File(path);
+             // Si el archivo no existe es creado
+            if (!file.exists()) {
+                 file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (IOException ex) {
+                    System.out.print("Clase :"+ Clase4Archivo.class.getName()+" error: " +ex.getMessage());
+          }
+         
+         
+         }
+             
+    
+  }

@@ -5,6 +5,7 @@
 package com.mycompany.proyectoclase4;
 
 import java.io.IOException;
+import java.lang.reflect.Modifier;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -27,7 +28,10 @@ public class ProyectoClase4 {
              //ejercicio1();
         
         // Ejercicio 2
-             ejercicio2();
+             // ejercicio2();
+             
+       // Ejercicio 3     
+             ejercicio3();
     }
    
     
@@ -73,5 +77,31 @@ public class ProyectoClase4 {
      
     
     }
+
+    private static void ejercicio3() {
+        
+        String path="E:\\UTN\\Proyectos\\Clase4\\ProyectoClase4\\";
+        
+        String fileSinCodificador="sinCodificado.txt";
+        String fileCodificado="codificado.txt";
+        
+        String strOrigina=JOptionPane.showInputDialog("Ingrese la oracion a codificar");
+        
+        Clase4Archivo fileSinCodificar = new Clase4Archivo(path+fileSinCodificador);
+        fileSinCodificar.crearFile(strOrigina);
+        
+        String strDesplazamiento= JOptionPane.showInputDialog("Ingrese un munero Desplazamiento ");
+      
+        int desplazamiento= Integer.parseInt(strDesplazamiento);
+        
+        FileCodeAndDeco fileCodeDeco= new FileCodeAndDeco();
+        String strCodificado=fileCodeDeco.codificarStr(strOrigina, desplazamiento);
+        
+        Clase4Archivo filesCodificados = new Clase4Archivo(path+fileCodificado);
+        filesCodificados.crearFile(strCodificado);
+        
+         JOptionPane.showMessageDialog(null, "El archivo: "+fileSinCodificador + " se codifico CORRECTAMENTE en el alchivo: "+fileCodificado);
+          
+       }
      
 }
